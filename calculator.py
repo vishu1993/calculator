@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+
 app = Flask(__name__)
 app.config.from_object(__name__)
 
@@ -25,5 +26,6 @@ def result():
         result = 'INVALID CHOICE'
     entry = {'result': result}
     return render_template('result.html', entry=entry)
+
 if __name__ == '__main__':
     app.run(debug=True)

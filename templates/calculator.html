@@ -1,38 +1,59 @@
 <html>
-<head>
-  <title>calculate your puzzles</title>
-</head>
-
-<body align=center>
-
- 
-
-
-<form action="http://127.0.0.1:5000/result", method="post"">
- <fieldset>
-<legend>Calculator:</legend>
-First number:<br>
-<input type="number" name="firstnumber" value="enter your first digit " >
-<br>
-Second number:<br>
-<input type="number" name="secnumber" value="enter your second digit " >
-
-<br>
-Enter your choice:
- <select name="option">
-<option value="Add">ADD</option>
-<option value="Sub">Subtract</option>
-<option value="Mult">Multiply</option>
-<option value="div">Division</option>
-</select>
-
-
-<br><br>
-<input type="submit" value="Submit">
-</fieldset>
-</form> 
-
+   <head>
+      <title>calculate your puzzles</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <style type="text/css">
+             h1{
+               margin: 30px 0;
+               padding: 0 200px 15px 0;
+               border-bottom: 1px solid #E5E5E5;
+             }
+         
+            .flask-cal{
+                       margin: 20px;
+            }
+   
+            body { background: #617992 ;}
+      </style> 
+   </head>
+ <body background="images.jpeg" align=center>
+     <div class="flask-cal">
+        <h1>calculator</h1>
+        <form action="http://127.0.0.1:5000/result", method="post", class="form-horizontal">
+              <div class="form-group">
+                   <label class="control-label col-xs-3" for="firstnumber">First number:</label>
+                   <div class="control-label col-xs-2">
+                       <input type="number" name="firstnumber"  placeholder="What's your first number ? " >
+                   </div>
+              </div>
+                    <div class="form-group">
+                         <label class="control-label col-xs-3" for="secnumber">Second number:</label>
+                         <div class="control-label col-xs-2">
+                              <input type="number" name="secnumber"   placeholder="What's your second number ? " >
+                         </div>
+                    </div>
+                          <div class="form-group">
+                          <label class="control-label col-xs-3">Enter your choice:</label>
+                                 <div class="col-xs-3">
+                                      <select class="form-control" name="option">
+                                      <option value="Add">ADD</option>
+                                      <option value="Sub">Subtract</option>
+                                      <option value="Mult">Multiply</option>
+                                      <option value="div">Division</option>  
+                                      </select>
+                                  </div>
+                    </div> <br/>
+                               <div class="form-group">
+                                    <div class="col-xs-offset-3 col-xs-9">
+                                        <button type="submit" class="btn btn-success">SUBMIT</button>
+                                        <button type="reset" class="btn btn-danger">CLEAR</button>
+                                    </div>
+                               </div>
+        </form>
+     </div>
 </body>
-
 </html>
-
